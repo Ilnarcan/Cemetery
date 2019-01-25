@@ -1,0 +1,16 @@
+﻿<Window x:Class="Cemetery.Message"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сообщение" Height="220" Width="250" WindowStyle="SingleBorderWindow" WindowState="Normal"
+        WindowStartupLocation="CenterScreen" MaxHeight="220" MaxWidth="250" MinWidth="250" HorizontalAlignment="Center"
+        VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+        Icon="/Cemetery;component/Images/App.ico" ResizeMode="CanMinimize" MinHeight="220">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#E7F5F5F5">
+        <Button Content="OK" HorizontalAlignment="Center" Margin="43,119,38,21" Name="Button1" Width="147"
+                Foreground="White" Click="button1_Click" Cursor="Hand" />
+        <TextBlock Height="50" HorizontalAlignment="Center" Margin="7,40,6,0" Name="TextBlock1" Text="TextBlock" VerticalAlignment="Top" Width="215" TextWrapping="Wrap" TextAlignment="Center" FontSize="15" />
+    </Grid>
+</Window>

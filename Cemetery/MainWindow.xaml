@@ -1,0 +1,389 @@
+﻿<Window x:Class="Cemetery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="«Visual-IT cemetery» - «Камея-Ритуал»" Height="650" Width="1350" IsEnabled="True"
+        WindowStartupLocation="CenterScreen" Icon="/Cemetery;component/Images/App.ico" MaxWidth="1350" MinWidth="1350"
+        MinHeight="650" MaxHeight="650" Closing="Window_Closing" HorizontalAlignment="Center" VerticalAlignment="Top"
+        HorizontalContentAlignment="Center" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid Width="1350" Height="624" OpacityMask="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*" />
+            <ColumnDefinition Width="28*" />
+            <ColumnDefinition Width="1294*" />
+        </Grid.ColumnDefinitions>
+        <TabControl Name="TabControl1" Padding="4" HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center" FlowDirection="LeftToRight" BorderBrush="White"
+                    Foreground="Green" OpacityMask="#FF69D869" Background="WhiteSmoke" Margin="-22,17,-4,1"
+                    Grid.ColumnSpan="3">
+            <TabItem Name="TabItem5" Opacity="0" MinWidth="100" MaxWidth="100" IsEnabled="False" IsSelected="False">
+                <Grid />
+            </TabItem>
+            <TabItem Name="TabItem1" BorderBrush="Gray" Foreground="White" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" Margin="-2,-2,-2,15" VerticalAlignment="Center"
+                     HorizontalAlignment="Center" IsEnabled="True" Padding="35,5" IsSelected="True"
+                     Background="#FF71BCE6" FontSize="15" ForceCursor="False" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/sozda2t2.png" />
+                </TabItem.Header>
+                <Grid Height="530" Width="1322">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0" />
+                        <ColumnDefinition Width="129" />
+                        <ColumnDefinition Width="219" />
+                        <ColumnDefinition Width="365" />
+                        <ColumnDefinition Width="107*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Фамилия" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="24,27,0,0"
+                           Name="Label1" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Content="Имя" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="24,73,0,0"
+                           Name="Label2" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Content="Отчество" Grid.Column="1" Height="28" HorizontalAlignment="Left"
+                           Margin="24,118,0,0" Name="Label3" VerticalAlignment="Top" FontSize="14"
+                           Foreground="#FF000019" />
+                    <Label Content="Возраст" Grid.Column="3" Height="28" HorizontalAlignment="Left" Margin="334,27,0,0"
+                           Name="Label4" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"
+                           Foreground="#FF000019" />
+                    <Label Content="Дата смерти" Grid.Column="3" Height="28" HorizontalAlignment="Left"
+                           Margin="334,72,0,0" Name="Label5" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"
+                           Foreground="#FF000019" />
+                    <Label Content="Дата захоронения" Grid.Column="3" Height="28" HorizontalAlignment="Left"
+                           Margin="334,118,0,0" Name="Label6" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"
+                           Foreground="#FF000019" />
+                    <Label Content="Свидетельство" Grid.Column="1" Height="28" HorizontalAlignment="Left"
+                           Margin="24,193,0,0" Name="Label7" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"
+                           Foreground="#FF000019" />
+                    <Label Content="Участок" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="32,252,0,0"
+                           Name="Label8" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Content="Ряд" Grid.Column="2" Height="28" HorizontalAlignment="Left" Margin="97,252,0,0"
+                           Name="Label9" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Content="Могила" Grid.Column="2" Height="28" HorizontalAlignment="Left" Margin="211,252,0,0"
+                           Name="Label10" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"
+                           Foreground="#FF000019" />
+                    <Label Content="Номер телефона" Grid.Column="3" Height="28" HorizontalAlignment="Left"
+                           Margin="334,252,0,0" Name="Label11" VerticalAlignment="Top" FontSize="14" Target="{Binding}"
+                           Grid.ColumnSpan="2" Foreground="#FF000019" />
+                    <Button Content="Создать" Margin="124,329,0,0" Name="Button2" Click="button2_Click" Height="67"
+                            VerticalAlignment="Top" Grid.Column="3" Width="238" BorderBrush="LightGray"
+                            HorizontalAlignment="Left" FontSize="28" Foreground="White" FontFamily="Georgia"
+                            FontWeight="Bold" FontStretch="Normal">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="0,23,0,0" Name="TextBox1"
+                             VerticalAlignment="Top" Width="209" TextAlignment="Center"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="50"
+                             FontSize="16" BorderBrush="LightGray" Background="White" TabIndex="1"
+                             KeyDown="textBox1_KeyDown" TextChanged="textBox1_TextChanged" LostFocus="TextBox1_LostFocus" />
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="0,70,0,0" Name="TextBox2"
+                             VerticalAlignment="Top" Width="209" MaxLength="50" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             BorderBrush="LightGray" TabIndex="2" KeyDown="textBox2_KeyDown"
+                             TextChanged="textBox2_TextChanged" LostFocus="TextBox2_LostFocus" />
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="0,115,0,0" Name="TextBox3"
+                             VerticalAlignment="Top" Width="209" MaxLength="50" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             CaretBrush="#FF6F1E1E" BorderBrush="LightGray" TabIndex="3" KeyDown="textBox3_KeyDown"
+                             TextChanged="textBox3_TextChanged" LostFocus="TextBox3_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="116,68,0,0" Name="TextBox7"
+                             VerticalAlignment="Top" Width="47" MaxLength="2" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             KeyDown="textBox7_KeyDown" BorderBrush="LightGray" TabIndex="5"
+                             TextChanged="textBox7_TextChanged" LostFocus="TextBox7_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="171,68,0,0" Name="TextBox8"
+                             VerticalAlignment="Top" Width="47" MaxLength="2" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             KeyDown="textBox8_KeyDown" BorderBrush="LightGray" TabIndex="6"
+                             TextChanged="textBox8_TextChanged" LostFocus="TextBox8_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="224,68,0,0" Name="TextBox9"
+                             VerticalAlignment="Top" Width="88" MaxLength="4" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             KeyDown="textBox9_KeyDown" BorderBrush="LightGray" TabIndex="7"
+                             TextChanged="textBox9_TextChanged" LostFocus="TextBox9_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="116,114,0,0"
+                             Name="TextBox10" VerticalAlignment="Top" Width="47" MaxLength="2"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="8"
+                             TextChanged="textBox10_TextChanged" KeyDown="textBox10_KeyDown" LostFocus="TextBox10_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="171,114,0,0"
+                             Name="TextBox11" VerticalAlignment="Top" Width="47" MaxLength="2"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="9"
+                             TextChanged="textBox11_TextChanged" KeyDown="textBox11_KeyDown" LostFocus="TextBox11_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="224,114,0,0"
+                             Name="TextBox12" VerticalAlignment="Top" Width="88" MaxLength="4"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="10"
+                             TextChanged="textBox12_TextChanged" KeyDown="textBox12_KeyDown" LostFocus="TextBox12_LostFocus" />
+                    <TextBox Grid.Column="4" Height="31" HorizontalAlignment="Left" Margin="116,252,0,0"
+                             Name="TextBox13" VerticalAlignment="Top" Width="228" MaxLength="25"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="17"
+                             KeyDown="textBox13_KeyDown" />
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="0,193,0,0" Name="TextBox14"
+                             VerticalAlignment="Top" Width="66" MaxLength="20" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             BorderBrush="LightGray" TabIndex="11" LostFocus="TextBox14_LostFocus" />
+                    <TextBox Grid.Column="2" Height="31" Margin="72,193,0,0" Name="TextBox15" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="102" MaxLength="20" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             BorderBrush="LightGray" TabIndex="12" LostFocus="TextBox15_LostFocus" />
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="180,193,0,0"
+                             Name="TextBox16" VerticalAlignment="Top" Width="260" MaxLength="100"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" Grid.ColumnSpan="2" FontSize="16" BorderBrush="LightGray"
+                             TabIndex="13" LostFocus="TextBox16_LostFocus" />
+                    <TextBox Grid.Column="1" Height="31" Margin="98,252,0,0" Name="TextBox17"
+                             VerticalAlignment="Top" MaxLength="7" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" TextAlignment="Center" FontSize="16"
+                             BorderBrush="LightGray" TabIndex="14" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="111" LostFocus="TextBox17_LostFocus" />
+                    <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="136,252,0,0"
+                             Name="TextBox18" VerticalAlignment="Top" Width="49" MaxLength="2"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="15" LostFocus="TextBox18_LostFocus" />
+                    <TextBox Grid.Column="3" Height="31" HorizontalAlignment="Left" Margin="57,252,0,0"
+                             Name="TextBox19" VerticalAlignment="Top" Width="49" MaxLength="2"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextAlignment="Center" FontSize="16" BorderBrush="LightGray" TabIndex="16" LostFocus="TextBox19_LostFocus" />
+                    <Label Content="Урна" FontSize="14" Grid.Column="3" Height="28" HorizontalAlignment="Left"
+                           Margin="334,193,0,0" Name="Label23" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="64"
+                           Foreground="#FF000019" />
+                    <CheckBox Grid.Column="4" Height="15" HorizontalAlignment="Left" Margin="39,202,0,0"
+                              Name="CheckBox1" VerticalAlignment="Top" Width="19" IsChecked="False"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowDrop="False"
+                              IsThreeState="False" Padding="4,0,0,0" FlowDirection="RightToLeft" FontSize="14"
+                              IsHitTestVisible="True" IsEnabled="True" TabIndex="18" />
+                    <TextBox Grid.Column="4" Height="29" HorizontalAlignment="Left" Margin="116,26,0,0" Name="TextBox4"
+                             VerticalAlignment="Top" Width="66" BorderBrush="LightGray" MaxLength="5" TabIndex="4"
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                             TextChanged="textBox4_TextChanged" KeyDown="textBox4_KeyDown" LostFocus="TextBox4_LostFocus" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem6" Selector.IsSelected="False" IsSelected="False" Opacity="0" Padding="3,1"
+                     IsEnabled="False" MinWidth="100" MinHeight="0" MaxWidth="100">
+                <Grid Height="535">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="86*" />
+                        <ColumnDefinition Width="756*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem2" BorderBrush="Gray" Foreground="White" Padding="35,5"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="-2,-2,-2,15"
+                     VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/open1.png"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                </TabItem.Header>
+                <Grid Height="518" Width="1286">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="42*" />
+                        <RowDefinition Height="253*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="21*" />
+                        <ColumnDefinition Width="130*" />
+                        <ColumnDefinition Width="394*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Обновить" Height="53" HorizontalAlignment="Left" Margin="20,357,0,0"
+                            Name="Button1" VerticalAlignment="Top" Width="204" Click="button1_Click" Grid.Column="1"
+                            Grid.Row="1" BorderBrush="LightGray" Background="White" FontSize="18">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <Button Content="Открыть карточку" Grid.Column="2" Grid.Row="1" Height="53"
+                            HorizontalAlignment="Left" Margin="559,356,0,0" Name="Button3" VerticalAlignment="Top"
+                            Width="295" Click="button3_Click_1" BorderBrush="LightGray" Background="White">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <DataGrid AutoGenerateColumns="True" Background="#FFF6F6F6" BorderBrush="LightGray"
+                              CanUserAddRows="True" CanUserResizeRows="False" Grid.ColumnSpan="3" Grid.Column="0"
+                              Grid.Row="0"
+                              Grid.RowSpan="2" Height="397" HorizontalAlignment="Left"
+                              HorizontalContentAlignment="Center" HorizontalGridLinesBrush="Black" IsReadOnly="True"
+                              Margin="10,6,0,0" Name="DataGrid1" VerticalAlignment="Top"
+                              VerticalContentAlignment="Center" Width="1270"
+                              MouseDoubleClick="dataGrid1_MouseDoubleClick" FontSize="15" GridLinesVisibility="All" />
+                    <Label Content="Количество захороненных" Grid.Column="2" Grid.Row="1" Height="52" HorizontalAlignment="Left" Margin="0,357,0,0" Name="Label25" VerticalAlignment="Top" Width="317" FontSize="18" FontWeight="Bold" />
+                    <TextBlock Grid.Column="2" Grid.Row="1" Height="30" HorizontalAlignment="Center" Margin="277,365,507,49" Name="TextBlock1" Text="TextBlock" VerticalAlignment="Center" Width="146" Foreground="Black" TextAlignment="Center" FontWeight="Bold" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem7" Opacity="0" MaxWidth="100" MinWidth="100" IsEnabled="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="440*" />
+                        <ColumnDefinition Width="640*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem3" BorderBrush="Gray" Foreground="White" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" Margin="-2,-2,-2,15" VerticalAlignment="Center"
+                     HorizontalAlignment="Center" IsEnabled="True" Padding="35,5" FontSize="15" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/search1.png" />
+                </TabItem.Header>
+                <Grid Height="532" Width="1320">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="103*" />
+                        <RowDefinition Height="345*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Фамилия" Height="28" HorizontalAlignment="Left" Margin="33,25,0,0" Name="Label12"
+                           VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Grid.Row="0" Content="Имя" Height="28" HorizontalAlignment="Left" Margin="33,60,0,0"
+                           Name="Label13" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Content="Отчество" Height="28" HorizontalAlignment="Left" Margin="33,96,0,0" Name="Label14"
+                           VerticalAlignment="Top" FontSize="14" Foreground="#FF000019"
+                           Grid.Row="0" Grid.RowSpan="2" />
+                    <Label Grid.Row="0" Content="Возраст" Height="28" HorizontalAlignment="Left" Margin="683,25,0,0"
+                           Name="Label15" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" />
+                    <Label Grid.Row="0" Content="Дата смерти" Height="28" HorizontalAlignment="Left"
+                           Margin="683,60,0,0" Name="Label16" VerticalAlignment="Top" FontSize="14"
+                           Foreground="#FF000019" />
+                    <Label Content="Дата захоронения" Height="28" HorizontalAlignment="Left" Margin="683,96,0,0"
+                           Name="Label17" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019"
+                           Grid.Row="0" Grid.RowSpan="2" />
+                    <Label Content="Свидетельство" Height="28" HorizontalAlignment="Left" Margin="19,37,0,0"
+                           Name="Label18" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" Grid.Row="1" />
+                    <Label Content="Участок" Height="28" HorizontalAlignment="Left" Margin="19,89,0,0" Name="Label19"
+                           VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" Grid.Row="1" />
+                    <Label Content="Ряд" Height="28" HorizontalAlignment="Left" Margin="214,87,0,0" Name="Label20"
+                           VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" Grid.Row="1" />
+                    <Label Content="Могила" Height="28" HorizontalAlignment="Left" Margin="314,87,0,0" Name="Label21"
+                           VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" Grid.Row="1" />
+                    <Label Content="Номер телефона" Height="28" HorizontalAlignment="Left" Margin="683,37,0,0"
+                           Name="Label22" VerticalAlignment="Top" FontSize="14" Foreground="#FF000019" Grid.Row="1" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="130,21,0,0" MaxLength="50" Name="TextBox20"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="209" BorderBrush="LightGray" KeyDown="textBox1_KeyDown"
+                             TextChanged="textBox20_TextChanged" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="130,57,0,0" MaxLength="50" Name="TextBox21"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="209" BorderBrush="LightGray" KeyDown="textBox2_KeyDown"
+                             TextChanged="textBox21_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="130,93,0,0" MaxLength="50" Name="TextBox22" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="209"
+                             BorderBrush="LightGray" KeyDown="textBox3_KeyDown"
+                             Grid.Row="0" Grid.RowSpan="2" TextChanged="textBox22_TextChanged" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="830,21,0,0" MaxLength="5" Name="TextBox23"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="80" BorderBrush="LightGray" TextChanged="textBox23_TextChanged" IsReadOnly="False" KeyDown="TextBox23_KeyDown" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="830,56,0,0" MaxLength="2" Name="TextBox26"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="47" BorderBrush="LightGray" TextChanged="textBox26_TextChanged" KeyDown="TextBox26_KeyDown" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="885,56,0,0" MaxLength="2" Name="TextBox27"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="47" BorderBrush="LightGray" TextChanged="textBox27_TextChanged" KeyDown="TextBox27_KeyDown" />
+                    <TextBox Grid.Row="0" FontSize="16" Height="31" HorizontalAlignment="Left"
+                             HorizontalContentAlignment="Center" Margin="938,56,0,0" MaxLength="4" Name="TextBox28"
+                             TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                             Width="88" BorderBrush="LightGray" TextChanged="textBox28_TextChanged" KeyDown="TextBox28_KeyDown" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="830,92,0,0" MaxLength="2" Name="TextBox29" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="47"
+                             BorderBrush="LightGray" Grid.Row="0" Grid.RowSpan="2" TextChanged="textBox29_TextChanged" KeyDown="TextBox29_KeyDown" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="885,92,0,0" MaxLength="2" Name="TextBox30" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="47"
+                             BorderBrush="LightGray" Grid.Row="0" Grid.RowSpan="2" TextChanged="textBox30_TextChanged" KeyDown="TextBox30_KeyDown" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="938,92,0,0" MaxLength="4" Name="TextBox31" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="88"
+                             BorderBrush="LightGray" Grid.Row="0" Grid.RowSpan="2" TextChanged="textBox31_TextChanged" KeyDown="TextBox31_KeyDown" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="807,37,0,0" MaxLength="25" Name="TextBox32" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="228"
+                             BorderBrush="LightGray" KeyDown="textBox13_KeyDown" Grid.Row="1"
+                             TextChanged="textBox32_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="130,37,0,0" MaxLength="20" Name="TextBox33" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="78"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox33_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Right" HorizontalContentAlignment="Center"
+                             Margin="0,37,994,0" MaxLength="20" Name="TextBox34" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="112"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox34_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="332,37,0,0" MaxLength="100" Name="TextBox35" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="306"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox35_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="85,87,0,0" MaxLength="7" Name="TextBox36" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="123"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox36_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="253,87,0,0" MaxLength="2" Name="TextBox37" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="49"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox37_TextChanged" />
+                    <TextBox FontSize="16" Height="31" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                             Margin="379,87,0,0" MaxLength="2" Name="TextBox38" TextAlignment="Center"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" Width="49"
+                             BorderBrush="LightGray" Grid.Row="1" TextChanged="textBox38_TextChanged" />
+                    <Button Background="White" BorderBrush="LightGray" BorderThickness="12" Content="Найти" Height="49"
+                            Margin="683,87,245,0" Name="Button4" VerticalAlignment="Top" Click="button4_Click"
+                            FontSize="18" Grid.Row="1">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <DataGrid AutoGenerateColumns="True" CanUserAddRows="True" CanUserResizeRows="False" Height="246"
+                              HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsReadOnly="True"
+                              Margin="6,154,0,0" Name="DataGrid2" VerticalAlignment="Top"
+                              VerticalContentAlignment="Center" Width="1301" HorizontalGridLinesBrush="Black"
+                              BorderBrush="LightGray" Background="#FFF6F6F6"
+                              MouseDoubleClick="dataGrid2_MouseDoubleClick" Grid.Row="1" />
+                    <Label Content="Урна" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="527,87,0,0"
+                           Name="Label24" VerticalAlignment="Top" Width="50" Foreground="#FF000019" Grid.Row="1" />
+                    <CheckBox AllowDrop="False" FlowDirection="RightToLeft" FontSize="14" Height="15"
+                              HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsChecked="False"
+                              IsEnabled="True" IsHitTestVisible="True" IsThreeState="False" Margin="583,96,0,0"
+                              Name="CheckBox2" Padding="4,0,0,0" VerticalAlignment="Top"
+                              VerticalContentAlignment="Center" Width="19" Grid.Row="1" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem8" Opacity="0" MinWidth="100" MaxWidth="100" IsEnabled="False">
+                <Grid />
+            </TabItem>
+            <TabItem Name="TabItem4" BorderBrush="Gray" Foreground="White" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" Margin="-2,-2,-2,15" VerticalAlignment="Center"
+                     HorizontalAlignment="Center" IsEnabled="True" Padding="35,5" FontSize="15" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/backup1.png" />
+                </TabItem.Header>
+                <Grid Height="468" Width="1286" Background="WhiteSmoke" Cursor="Arrow">
+                    <Button Content="Открыть базу" Height="143" HorizontalAlignment="Left" Margin="98,109,0,0"
+                            Name="Button5" VerticalAlignment="Top" Width="395" Click="button5_Click"
+                            BorderBrush="LightGray" Background="White" FontSize="18" Cursor="Hand">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <Button Content="Сохранить базу" Height="143" HorizontalAlignment="Left" Margin="820,109,0,0"
+                            Name="Button6" VerticalAlignment="Top" Width="363" Click="button6_Click"
+                            BorderBrush="LightGray" Background="White" FontSize="18" Cursor="Hand">
+                        <Button.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Button.Effect>
+                    </Button>
+                    <Button Content="Загрузить базу" Height="117" HorizontalAlignment="Left" Margin="513,301,0,0"
+                            Name="Button7" VerticalAlignment="Top" Width="312" Click="button7_Click" IsEnabled="True"
+                            Visibility="Hidden" Cursor="Hand" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Cemetery;component/Images/line21.png" />
+        </Grid.Background>
+    </Grid>
+</Window>

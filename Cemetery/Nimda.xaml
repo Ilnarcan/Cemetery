@@ -1,0 +1,237 @@
+﻿<Window x:Class="Cemetery.Nimda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="«Visual-IT cemetery» - «Камея-Ритуал»" Height="700" Width="1350" IsEnabled="True"
+        WindowStartupLocation="CenterScreen" Icon="/Cemetery;component/Images/App.ico" MaxWidth="1350" MinWidth="1350"
+        MinHeight="700" MaxHeight="700" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid Width="1345" Height="672" OpacityMask="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition Width="1345*" />
+        </Grid.ColumnDefinitions>
+        <TabControl Name="TabControl1" Padding="4" HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center" FlowDirection="LeftToRight" BorderBrush="White"
+                    Foreground="Green" OpacityMask="#FF69D869" Background="WhiteSmoke" Margin="0,13,0,1"
+                    Grid.ColumnSpan="2">
+            <TabItem Name="TabItem5" Opacity="0" MinWidth="250" MaxWidth="250" IsSelected="False" IsEnabled="False">
+                <Grid />
+            </TabItem>
+            <TabItem Name="TabItem1" BorderBrush="Gray" Foreground="White" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" Margin="-2,-2,-2,15" VerticalAlignment="Center"
+                     HorizontalAlignment="Center" IsEnabled="True" Padding="35,5" IsSelected="True"
+                     Background="#FF71BCE6" FontSize="15" ForceCursor="False" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/doc.png"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown_6" />
+                </TabItem.Header>
+                <Grid Height="595" Name="Grid2" Width="1337">
+                    <Button Content="Дешифр" Cursor="Hand" Height="43" HorizontalAlignment="Left" Margin="1232,160,0,0"
+                            Name="Button3" VerticalAlignment="Top" Visibility="Hidden" Width="75" Click="button3_Click" />
+                    <Button Content="Шифр" Cursor="Hand" Height="48" HorizontalAlignment="Left" Margin="1229,106,0,0"
+                            Name="Button4" VerticalAlignment="Top" Visibility="Hidden" Width="78" Click="button4_Click" />
+                    <ComboBox Height="38" HorizontalAlignment="Left" Margin="478,190,0,0" Name="ComboBox1"
+                              VerticalAlignment="Top" Width="159" FontFamily="Segoe UI"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                        <ComboBoxItem Content="I декада" />
+                        <ComboBoxItem Content="II декада" />
+                        <ComboBoxItem Content="III декада" />
+                    </ComboBox>
+                    <ComboBox Height="38" HorizontalAlignment="Left" Margin="478,278,0,0" Name="ComboBox2"
+                              VerticalAlignment="Top" Width="159" FontFamily="Segoe UI"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                        <ComboBoxItem Content="Январь" />
+                        <ComboBoxItem Content="Февраль" />
+                        <ComboBoxItem Content="Март" />
+                        <ComboBoxItem Content="Апрель" />
+                        <ComboBoxItem Content="Май" />
+                        <ComboBoxItem Content="Июнь" />
+                        <ComboBoxItem Content="Июль" />
+                        <ComboBoxItem Content="Август" />
+                        <ComboBoxItem Content="Сентябрь" />
+                        <ComboBoxItem Content="Октябрь" />
+                        <ComboBoxItem Content="Ноябрь" />
+                        <ComboBoxItem Content="Декабрь" />
+                    </ComboBox>
+                    <DatePicker Height="38" HorizontalAlignment="Left" Margin="1061,209,0,0" Name="DatePicker1"
+                                VerticalAlignment="Top" Width="218" SelectedDateFormat="Long"
+                                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                CalendarStyle="{StaticResource StyleCalendar}"
+                                FlowDirection="LeftToRight" Cursor="Hand" />
+                    <ComboBox Height="38" HorizontalAlignment="Left" Margin="478,363,0,0" Name="ComboBox3"
+                              VerticalAlignment="Top" Width="159" FontFamily="Segoe UI"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                        <ComboBoxItem Content="2013" />
+                        <ComboBoxItem Content="2014" />
+                        <ComboBoxItem Content="2015" />
+                        <ComboBoxItem Content="2016" />
+                        <ComboBoxItem Content="2017" />
+                        <ComboBoxItem Content="2018" />
+                        <ComboBoxItem Content="2019" />
+                        <ComboBoxItem Content="2020" />
+                        <ComboBoxItem Content="2021" />
+                        <ComboBoxItem Content="2022" />
+                        <ComboBoxItem Content="2023" />
+                    </ComboBox>
+                    <ComboBox Height="38" HorizontalAlignment="Left" Margin="803,278,0,0" Name="ComboBox4"
+                              VerticalAlignment="Top" Width="165" FontFamily="Segoe UI"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                        <ComboBoxItem Content="Январь" />
+                        <ComboBoxItem Content="Февраль" />
+                        <ComboBoxItem Content="Март" />
+                        <ComboBoxItem Content="Апрель" />
+                        <ComboBoxItem Content="Май" />
+                        <ComboBoxItem Content="Июнь" />
+                        <ComboBoxItem Content="Июль" />
+                        <ComboBoxItem Content="Август" />
+                        <ComboBoxItem Content="Сентябрь" />
+                        <ComboBoxItem Content="Октябрь" />
+                        <ComboBoxItem Content="Ноябрь" />
+                        <ComboBoxItem Content="Декабрь" />
+                    </ComboBox>
+                    <ComboBox Height="38" HorizontalAlignment="Left" Margin="803,363,0,0" Name="ComboBox5"
+                              VerticalAlignment="Top" Width="165" FontFamily="Segoe UI"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                        <ComboBoxItem Content="2013" />
+                        <ComboBoxItem Content="2014" />
+                        <ComboBoxItem Content="2015" />
+                        <ComboBoxItem Content="2016" />
+                        <ComboBoxItem Content="2017" />
+                        <ComboBoxItem Content="2018" />
+                        <ComboBoxItem Content="2019" />
+                        <ComboBoxItem Content="2020" />
+                        <ComboBoxItem Content="2021" />
+                        <ComboBoxItem Content="2022" />
+                        <ComboBoxItem Content="2023" />
+                    </ComboBox>
+                    <DatePicker Cursor="Hand" FlowDirection="LeftToRight" Height="38" HorizontalAlignment="Left"
+                                HorizontalContentAlignment="Center" Margin="1061,316,0,0" Name="DatePicker2"
+                                SelectedDateFormat="Long" VerticalAlignment="Top" VerticalContentAlignment="Center"
+                                CalendarStyle="{StaticResource StyleCalendar}"
+                                Width="218" />
+                    <Label Content="декада:" Height="49" HorizontalAlignment="Left" Margin="372,190,0,0" Name="Label9"
+                           VerticalAlignment="Top" Width="100" FontSize="18" FontWeight="Normal" Foreground="DimGray" Cursor="Arrow" />
+                    <Label Content="месяц:" Height="38" HorizontalAlignment="Left" Margin="372,278,0,0" Name="Label10"
+                           VerticalAlignment="Top" FontSize="18" FontWeight="Normal" Foreground="DimGray" Width="100" Cursor="Arrow" />
+                    <Label Content="год:" Height="42" HorizontalAlignment="Left" Margin="372,363,0,0" Name="Label11"
+                           VerticalAlignment="Top" FontSize="18" Width="100" FontWeight="Normal" Foreground="DimGray" Cursor="Arrow" />
+                    <Label Content="месяц:" FontSize="18" Height="38" HorizontalAlignment="Left" Margin="697,278,0,0"
+                           Name="Label12" VerticalAlignment="Top" Foreground="DimGray" FontWeight="Normal" Width="100" Cursor="Arrow" />
+                    <Label Content="год:" FontSize="18" Height="42" HorizontalAlignment="Left" Margin="697,363,0,0"
+                           Name="Label13" VerticalAlignment="Top" Width="100" Foreground="DimGray" FontWeight="Normal" Cursor="Arrow" />
+                    <Label Content="дата начала:" FontSize="18" Height="38" HorizontalAlignment="Left"
+                           Margin="1098,165,0,0" Name="Label14" VerticalAlignment="Top" Width="152"
+                           Foreground="DimGray" FontWeight="Normal" Cursor="Arrow" />
+                    <Label Content="дата окончания:" FontSize="18" Height="38" HorizontalAlignment="Left"
+                           Margin="1098,272,0,0" Name="Label15" VerticalAlignment="Top" Width="152"
+                           Foreground="DimGray" FontWeight="Normal" Cursor="Arrow" />
+                    <Image Source="/Cemetery;component/Images/open1.png" Height="46" Width="193"
+                           Margin="83,489,1061,60" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" />
+                    <Image Source="/Cemetery;component/Images/greate.png" Height="46" Width="193"
+                           Margin="83,256,1061,293" MouseLeftButtonDown="Image_MouseLeftButtonDown_2" Cursor="Hand" />
+                    <Image Cursor="Hand" Height="46" Margin="445,490,699,60"
+                           Source="/Cemetery;component/Images/open1.png" Width="193"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown_3" />
+                    <Image Cursor="Hand" Height="46" Margin="757,489,388,60"
+                           Source="/Cemetery;component/Images/open1.png" Width="193"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown_4" />
+                    <Image Cursor="Hand" Height="46" Margin="1084,489,60,60"
+                           Source="/Cemetery;component/Images/open1.png" Width="193"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown_5" />
+                    <Line Margin="10,10,939,580" Stroke="Gray" StrokeThickness="3" Width="386" X2="9000000" Y1="100"
+                          Y2="350" />
+                    <TextBlock Height="112" HorizontalAlignment="Left" Margin="-2,80,0,0" Name="TextBlock1" Text="" VerticalAlignment="Top" Width="366" TextAlignment="Center" Foreground="Black" TextWrapping="Wrap" FontSize="24" FontWeight="Normal" Cursor="Arrow" />
+                    <Image Height="1" HorizontalAlignment="Left" Margin="1,343,0,0" Name="Image1" Stretch="Fill" VerticalAlignment="Top" Width="363" Source="/Cemetery;component/Images/lineg.png" />
+                    <Image Height="520" HorizontalAlignment="Left" Margin="365,0,0,4" Name="Image2" Stretch="Fill" VerticalAlignment="Bottom" Width="1" Source="/Cemetery;component/Images/line.png" />
+                    <Image Height="520" HorizontalAlignment="Left" Margin="690,0,0,4" Name="Image3" Source="/Cemetery;component/Images/line.png" Stretch="Fill" VerticalAlignment="Bottom" Width="1" />
+                    <Image Height="520" HorizontalAlignment="Left" Margin="1010,0,0,4" Name="Image4" Source="/Cemetery;component/Images/line.png" Stretch="Fill" VerticalAlignment="Bottom" Width="1" />
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="Black" Height="43" HorizontalAlignment="Left" Margin="1,363,0,0" Name="TextBlock2" Text="Текущий день" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" />
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="Black" Height="47" HorizontalAlignment="Left" Margin="362,88,0,0" Name="TextBlock3" Text="Декада" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Cursor="Arrow" />
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="Black" Height="47" HorizontalAlignment="Left" Margin="687,88,0,0" Name="TextBlock4" Text="Месяц" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Cursor="Arrow" />
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="Black" Height="37" HorizontalAlignment="Left" Margin="1012,88,0,0" Name="TextBlock5" Text="Период" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Cursor="Arrow" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem6" Opacity="0" MinWidth="350" MinHeight="0" MaxWidth="350" IsEnabled="False">
+                <Grid Height="535">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="86*" />
+                        <ColumnDefinition Width="756*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem2" BorderBrush="Gray" Foreground="White" Padding="35,5"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="-2,-2,-2,15"
+                     VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Cursor="Hand">
+                <TabItem.Header>
+                    <Image Width="205" Height="38" Source="/Cemetery;component/Images/admin.png"
+                           MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                </TabItem.Header>
+                <Grid Height="448" Width="1302">
+                    <Label Content="Логин" Height="36" HorizontalAlignment="Left" Margin="273,66,0,0" Name="Label1"
+                           VerticalAlignment="Top" Width="59" />
+                    <Label Content="Пароль" Height="31" Margin="262,110,970,0" Name="Label2" VerticalAlignment="Top" />
+                    <Label Content="Права администратора" Height="49" HorizontalAlignment="Left" Margin="162,167,0,0"
+                           Name="Label3" VerticalAlignment="Top" />
+                    <Button Content="Создать пользователя" Height="73" HorizontalAlignment="Left" Margin="208,267,0,0"
+                            Name="Button1" VerticalAlignment="Top" Width="277" Click="button1_Click" />
+                    <Rectangle Height="100" HorizontalAlignment="Left" Margin="6,336,0,0" Name="Rectangle1"
+                               Stroke="WhiteSmoke" VerticalAlignment="Top" Width="200" />
+                    <Button Content="Удалить пользователя" Height="73" HorizontalAlignment="Left" Margin="863,267,0,0"
+                            Name="Button2" VerticalAlignment="Top" Width="277" Click="button2_Click" />
+                    <TextBox BorderBrush="LightGray" FontSize="16" Height="31" HorizontalContentAlignment="Center"
+                             Margin="338,0,769,346" MaxLength="16" Name="TextBox1" TabIndex="2147483645"
+                             TextWrapping="NoWrap" VerticalAlignment="Bottom" VerticalContentAlignment="Center" />
+                    <PasswordBox BorderBrush="LightGray" FontSize="16" Height="31" HorizontalContentAlignment="Center"
+                                 IsTabStop="True" Margin="338,0,769,301" MaxLength="16" Name="PasswordBox1"
+                                 TabIndex="2147483646" VerticalAlignment="Bottom" VerticalContentAlignment="Center" />
+                    <CheckBox AllowDrop="False" FlowDirection="RightToLeft" FontSize="14" Height="15"
+                              HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsChecked="False"
+                              IsEnabled="True" IsHitTestVisible="True" IsThreeState="False" Margin="338,177,0,0"
+                              Name="CheckBox1" Padding="4,0,0,0" TabIndex="18" VerticalAlignment="Top"
+                              VerticalContentAlignment="Center" Width="19" />
+                    <DataGrid AreRowDetailsFrozen="True" AutoGenerateColumns="True" Background="#FFF6F6F6" BorderBrush="LightGray" CanUserAddRows="True" CanUserResizeRows="False" FontSize="15" GridLinesVisibility="All" HeadersVisibility="All" Height="151" HorizontalAlignment="Left" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="Black" IsReadOnly="True" Margin="891,55,0,0" MinColumnWidth="30" Name="DataGrid1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="249" />
+                    <Image Height="444" HorizontalAlignment="Left" Margin="689,0,0,4" Name="Image5" Source="/Cemetery;component/Images/line.png" Stretch="Fill" VerticalAlignment="Bottom" Width="1" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem7" Opacity="0" MaxWidth="100" MinWidth="100" IsEnabled="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="440*" />
+                        <ColumnDefinition Width="640*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabItem8" Opacity="0" MinWidth="100" MaxWidth="100" IsEnabled="False">
+                <Grid />
+            </TabItem>
+        </TabControl>
+        <Grid Name="Grid1" Grid.Column="1" Margin="0,75,-1,521" Background="#69D3D3D3">
+            <ComboBox FontFamily="Segoe UI" Height="38" HorizontalContentAlignment="Left"
+                      Margin="272,17,0,0" Name="ComboBox6" VerticalAlignment="Top" VerticalContentAlignment="Center" DropDownClosed="ComboBox6_DropDownClosed" FontSize="18" HorizontalAlignment="Left" Width="477">
+                <ComboBoxItem Content="Захоронения в резерв" />
+                <ComboBoxItem Content="Отчет по захоронениям и памятникам" />
+                <ComboBoxItem Content="Отчет по приходу и расходу" />
+                <ComboBoxItem Content="Памятники" />
+                <ComboBoxItem Content="Платежная ведомость(аванс)" />
+                <ComboBoxItem Content="Платежная ведомость(зарплата)" />
+                <ComboBoxItem Content="Премия мастерам" />
+                <ComboBoxItem Content="Приход материальных средств" />
+                <ComboBoxItem Content="Приход, ритуальные услуги" />
+                <ComboBoxItem Content="Расход" />
+                <ComboBoxItem Content="Расход по зарплате и премиальных" />
+                <ComboBoxItem Content="Резервы" />
+                <ComboBoxItem Content="Списание канцелярских товаров" />
+                <ComboBoxItem Content="Списание материалов в производство" />
+                <ComboBoxItem Content="Список захоронений жителей пос. Кузьмоловский" />
+                <ComboBoxItem Content="Список захоронений, оплата" />
+            </ComboBox>
+            <Label Content="Выберите тип документа" FontSize="20" FontWeight="Normal" Foreground="DimGray" Height="49"
+                   HorizontalAlignment="Left" Margin="18,17,0,0" Name="Label16" VerticalAlignment="Top" Width="248" />
+        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Cemetery;component/Images/line21.png" />
+        </Grid.Background>
+    </Grid>
+</Window>
